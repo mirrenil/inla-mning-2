@@ -1,6 +1,4 @@
 # Inlämning 2
-## Av Erik Isaksson och Miranda Nilhag
-## Orginalhemsida: https://suzannacollinsbooks.com
 
 *Detta är ett skolprojekt i HTML och CSS.*
 
@@ -18,4 +16,8 @@ Avgränsningar:
 Då det inte fanns någonstans på sidan där man kunde ta kontakt med författaren så valde vi att göra det som vår andra sida. 
 Därför finns det endast skrämdumpar av startsidan.
 
+## Av Erik Isaksson och Miranda Nilhag
+[Orginalhemsida] (https://suzannacollinsbooks.com)
+
 [Demo] (https://mirrenil.github.io/modernized-website/)
+
