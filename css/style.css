@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .11em;
+    line-height: 1.5em;
+}
+html {
+    height: 100%;
+}
+
+/* Återanvändbar css */
+.skin {
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+/* -- */
+
+
+header {
+    background-color: #dbdcd5;
+    grid-area: h;
+}
+
+.header-logo {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    grid-area: a;
+    position: relative;
+    overflow-x: hidden;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    
+}
+
+/* Header icons styling starts here */
+.icons {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.fa {
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+i {
+    padding: 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Main content starts here */
+main {
+    background-color: #c8c0c0;
+    grid-area: m;
+    padding: 1rem;
+}
+
+.teaser {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Animation on book starts*/
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    padding: .8rem;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.order {
+    background-color: #a09898;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 20px;
+}
+
+/* Main content continues */
+.first-article {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.summary {
+    font-size: 1.5rem;
+}
+
+.more {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.review-1 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+
+h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.about {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+
+.suzanne {
+    padding: 2rem 0 2rem;
+}
+
+.newsletter {
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 2.5rem;
+}
+
+.promise {
+    font-size: 1rem;
+    padding: 0;
+}
+
+/* Animation for newsletter */
+input {
+    height: inherit;
+    width: 16rem;
+    border: 0;
+    border-bottom: 2px solid #2e2a33;
+    outline: none;
+    background: transparent;
+    color: black;
+    font-size: 1rem;
+    transition: all 0.35s;
+}
+
+input:focus {
+    border-bottom-color: #fafafa;
+}
+
+input:focus~.label {
+    opacity: 0;
+    transform: translate(-3rem, -50%)
+}
+
+input:focus~.label-sm {
+    opacity: 1;
+    transform: translate(0, -50%)
+}
+
+.sign-up {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+}
+
+.promise {
+    margin: 2rem 1rem;
+}
+
+/* Sticky footer */
+footer {
+    background-color: #dbdcd5;
+    grid-area: f;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width:568px) and (min-width:768px) {
+    body {
+
+        background-color: #dbdcd5;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 5rem (6, auto);
+        grid-template-areas:
+            "h h h h h h"
+            "m m m m m m"
+            "m m m m m m"
+            "m m m m m m"
+            "m m m m m m"
+            "f f f f f f"
+        ;
+    }
+
+    .header-logo {
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .icons {
+        padding: 0;
+        margin: 10px;
+    }
+
+    .teaser {
+        font-size: 2rem;
+    }
+
+    .container {
+        position: relative;
+        width: 50%;
+    }
+    .summary {
+        text-align: center;
+        padding: 0 2 0 2rem;
+    }
+    .review-1 {
+        text-align: center;
+        padding: 0 2 0 2rem;
+    }
+    .about {
+        text-align: center;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+}
+
+
+/* Desktop */
+@media (min-width:1396px) {
+    body {
+        background-color: #dbdcd5;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 8rem(8, auto);
+        grid-template-areas:
+            "h h h h h h h h"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "f f f f f f f f"
+        ;
+    }
+
+    .header-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        position: relative;
+    }
+
+    .teaser {
+        font-size: 2.5rem;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .container {
+        position: relative;
+        width: 50%;
+    }
+
+    .summary {
+        text-align: center;
+        padding: 0 2 0 2rem;
+    }
+    .review-1 {
+        text-align: center;
+        padding: 0 2 0 2rem;
+    }
+    .about {
+        text-align: center;
+        padding: 0 2 0 2rem;
+    }
+}

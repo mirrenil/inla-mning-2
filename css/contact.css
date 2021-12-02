@@ -1,0 +1,133 @@
+/* Återanvändbar css */
+.flex {
+    display: flex;
+}
+.column {
+    flex-direction: column;
+}
+/* --- */
+.grid {
+    width: 90%;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    font-size: .7rem;
+    padding-bottom: 2rem;
+}
+p {
+    padding: 0 .2rem
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact {
+    width: 100%;
+
+}
+
+input {
+    display: flex;
+    background-color: #dbdcd5;
+    border-radius: 50rem;
+    padding: .8rem 1rem;
+    margin-bottom: .8rem;
+    margin-top: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.invite {
+    padding: .5rem;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+h4{
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.submit {
+    margin: 0px auto;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tablet */
+@media (max-width:568px) and (min-width:768px) {
+    body {
+        background-color: #c8c0c0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 5rem(6, auto);
+        grid-template-areas:
+            "h h h h h h"
+            "m m m m m m"
+            "m m m m m m"
+            "m m m m m m"
+            "m m m m m m"
+            "f f f f f f"
+        ;
+    }
+
+    .header-logo {
+        height: 200px;
+    }
+
+    .icons {
+        padding: 0;
+        margin: 10px;
+    }
+
+    .container {
+        position: relative;
+        width: 50%;
+    }
+
+    .grid {
+        width: 100%;
+        justify-content: space-evenly;
+        align-content: center;
+        padding: 50px;
+    }
+}
+
+/* Desktop */
+@media (min-width:1396px) {
+    body {
+        background-color: #c8c0c0;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 8rem(8, auto);
+        grid-template-areas:
+            "h h h h h h h h"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "m m m m m m m m"
+            "f f f f f f f f"
+        ;
+    }
+
+    .header-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .grid {
+        width: 100%;
+        justify-content: space-between;
+        padding: 50px;
+    }
+   
+}
